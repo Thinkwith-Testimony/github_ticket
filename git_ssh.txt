@@ -1,0 +1,19 @@
+To initialize a new git repo and grant ssh access:
+1. Go to your organization and under repositories, click on new (highlighted in green)
+2. Provide a repository name under the (repository name box), provide a brief description in the description box for your new repo.
+3. Indicate whether its a private repo or public repo. you can add a README file or .gitignore file if necessary.
+4. click on create repository to create new repository.
+5. In your local machine ( this process assumes you have a linux machine) create a new directory using the mkdir command and cd into the directory
+6. Enter the 'git init' command to initialize this directory, making it able to track changes in your local and remote repository.
+7  In your user home directory, run the code ssh-keygen -t ed25519 -C "your_email@example.com" this code will generate a ssh private and public key using the email as label
+8 You're then prompted to enter a file to save your keys. if you previously have ssh keys and you provide same filename, it just overwrites with the new ssh key.
+9. You are also prompted to provide passphrase for added security. push enter twice to skip providing a passphrase.
+10 Next you have to add your ssh keys to ssh agent. to start the agent run the code eval "$(ssh-agent -s)" This will show a process id to show that agent is running
+11 Add your SSH private key to the SSH agent using the code ssh-add ~/.ssh/ssh_filename (the path should end with the filename of your ssh keys in place of ssh_filename)
+12 cat and copy your public ssh keys (the one that ends with .pub) using the command cat ~/.ssh/ssh_filename
+13 Click your profile photo, then click settings, navigate to the access section and click SSH and GPG Keys.
+14 Click new SSH Key or Add SSH Key, In title field provide a brief description for the SSH key. Select the type of key.
+15 Paste your public key in the key field. Click Add SSH key.
+16 In your local git hub directory, use the code git remote add "paste ssh url of your git repo on git bash" and hit enter.
+17 Now create a new file in your working area, used git add . to add that file to staging, then git commit -m "message" to enter commit message.
+18 After a successful comit use git push origin main to push your code to the remote repo.
