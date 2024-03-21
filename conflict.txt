@@ -1,1 +1,2 @@
-This file is intended to simulate and fix a merge conflict
+This file is intended to simulate and fix a merge conflict 
+ im adding a line to this file on main branch
