@@ -1,5 +1,12 @@
-
-This file is intended to simulate and fix a merge conflict 
-im adding a line to this file on main branch
-This file is intended to simulate and fix a merge conflict
-im adding a different line in the dev branch to this file
+HOW TO SIMULATE AND FIX MERGE CONFLICTS IN GITHUB
+1.Create a branch from a main branch using the command git branch "branch name"
+2.Run git switch "branch name" to switch to new branch
+3.Run git push origin " branch name to push newly created branch to local repo"
+4.create new file in newly created branch
+5.Use command git checkout main to switch back to main branch
+6.ls the files in main branch, you will find a copy of newly created file in new branch in your main branch
+7.Add new contents in new file, use git add . to add to staging area and git commit -m to commit to local repo.
+8.Use git checkout to switch back to newly created branch, add new content to same file, and commit file.
+9.Same file now has two different contents in two different branches. run the command git diff in newly created branch to see the difference between the files in branches
+10.Run the command git merge main, and you will run into a merge conflict.
+11.Edit file by vi <filename> to fix conflicts in the file. now run git commit -a -m "commit message" to commit merge fix.
